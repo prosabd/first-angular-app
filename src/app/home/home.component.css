@@ -1,7 +1,7 @@
 /* home.component.css */
 :root {
   --primary-color: #5a4ccc;
-  --background-color: #f8f8f8;
+  --background-color: #0000ed;
   --card-background: #ffffff;
   --info-background: #e8e6ff;
 }
@@ -39,47 +39,9 @@ button.primary {
 
 .results {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 20px;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.housing-location {
-  background-color: var(--card-background);
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.housing-location img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.housing-location-info {
-  background-color: var(--info-background);
-  padding: 15px;
-}
-
-.housing-location-info h2 {
-  margin: 0;
-  color: var(--primary-color);
-  font-size: 18px;
-}
-
-.housing-location-info p {
-  margin: 5px 0 0;
-  color: #666;
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-}
-
-.housing-location-info p::before {
-  content: "📍";
-  margin-right: 5px;
+  padding: 20px;
 }
 
 @media (max-width: 768px) {
@@ -92,4 +54,5 @@ button.primary {
     border-radius: 5px;
     margin-bottom: 10px;
   }
+
 }

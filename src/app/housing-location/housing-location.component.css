@@ -1,0 +1,68 @@
+@import '../home/home.component.css';
+
+.housing-location {
+    background-color: var(--primary-color);
+    transition: transform 0.3s ease;
+    width: 400px;
+    min-width: 200px; 
+    max-width: 500px; 
+    flex-direction: column;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0!important;
+}
+  
+.housing-location:hover {
+    transform: translateY(-5px);
+}
+  
+.housing-location img {
+    width: 100%;
+    height: 20vh;
+    object-position: center;
+    display: block;
+}
+  
+.housing-location-info {
+    background-color: var(--info-background);
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+  
+.housing-location-info h2 {
+    margin: 0 0 10px;
+    color: rgba(0, 0, 0, 0.75);
+    font-size: 18px;
+    font-weight: bold;
+}
+  
+.housing-location-info p {
+    margin: 5px 0 0;
+    color: rgba(50, 50, 50, alpha);
+    font-size: 14px;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+}
+
+.housing-location-info p::before {
+    content: "📍";
+    margin-right: 5px;
+  }
+
+@media (max-width: 1200px) {
+    .housing-location {
+      width: 100px;
+    }
+}
+  
+@media (max-width: 768px) {
+  
+    .housing-location {
+      width: 100%;
+    }
+}
