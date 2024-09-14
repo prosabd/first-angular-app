@@ -1,2 +1,33 @@
+# dependencies
+/node_modules
+/angular.json
+/package-lock.json
+/package.json
+/coverage
+
+# misc
 node_modules
+/.angular
+/.editorconfig
+/.gitattributes
+/.prettierrc
+/.vscode
+
+# compiled output
+/dist
+/out-tsc
+
+# environment files
+/src/environments/environment.ts
+/src/environments/environment.prod.ts
+
+# IDE files
 .vscode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# ignore .DS_Store on Mac
+.DS_Store
