@@ -11,8 +11,8 @@ import { HousingService } from "../housing.service";
   template: `
     <section>
       <form class="search-form">
-        <input type="text" placeholder="Filter by city" #filter>
-        <button class="primary" type="button" (click)="filterResults(filter.value)">Search</button>
+        <input type="text" placeholder="Filter by city" (input)="filterResults($event)" #filter>
+        <!-- <button class="primary" type="button" (click)="filterResults(filter.value)">Search</button> -->
       </form>
     </section>
     <section class="results">
@@ -36,7 +36,10 @@ export class HomeComponent {
     });
   }
   
-  filterResults(text: string) {
+  filterResults(event: Event) {
+    const target = event.target as HTMLInputElement;
+    const text = target.value;
+    
     if (!text) this.filteredLocationList = this.housingLocationList;
 
     this.filteredLocationList = this.housingLocationList.filter(
